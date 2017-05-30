@@ -9,7 +9,30 @@ prose:
         field:
           element: "text"
           label: "title"
+      date: &DATE_FIELD
+        name: "date"
+        field:
+          element: "text"
+          label: "date"
+          help: "This should be a date formatted year, month, day: YYYY-MM-DD"
+          placeholder: "2013-05-12"
+      layout: &LAYOUT_FIELD
+        name: "layout"
+        field:
+          element: "hidden"
     content/posts:
       - <<: *TITLE_FIELD
+      - <<: *DATE_FIELD
+      - <<: *LAYOUT_FIELD
+        value: "Lesson"
+      - lesson:
+        name: "lesson"
+        field:
+          element: "text"
+          help: "This should be a link to your lesson on the web. (e.g. https://www.lessons.com/my/lesson.html)"
+          placeholder: "https://www.lessons.com/my/lesson.html"
     content/lessons:
       - <<: *TITLE_FIELD
+      - <<: *DATE_FIELD
+      - <<: *LAYOUT_FIELD
+        value: "Post"
