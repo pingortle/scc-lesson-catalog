@@ -1,3 +1,14 @@
 prose:
   rooturl: "content"
   media: "content/assets"
+  metadata:
+    lessons:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      posts:
+        - name: "title"
+          field:
+            element: "text"
+            label: "title"
