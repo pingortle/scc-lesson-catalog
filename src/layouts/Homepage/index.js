@@ -7,6 +7,7 @@ const Homepage = (props) => {
   return (
     <Page { ...props }>
       <LatestPosts layout="Lesson" />
+      <LatestPosts />
     </Page>
   )
 }

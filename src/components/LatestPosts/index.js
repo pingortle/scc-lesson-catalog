@@ -19,7 +19,7 @@ const LatestPosts = (props, { collection }) => {
   return (
     <div>
       <h2 className={ styles.latestPosts }>
-        { "Latest Posts" }
+        { `Latest ${layout}s` }
       </h2>
       <PagesList pages={ latestPosts } />
     </div>
