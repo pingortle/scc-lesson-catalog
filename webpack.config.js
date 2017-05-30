@@ -37,10 +37,17 @@ export default (config = {}) => {
           loader: phenomicLoader,
           query: {
             context: path.join(__dirname, config.source),
-            // plugins: [
-            //   ...require("phenomic/lib/loader-preset-markdown").default
-            // ]
-            // see https://phenomic.io/docs/usage/plugins/
+            plugins: [
+              ...require("phenomic/lib/loader-preset-markdown").default,
+
+              // Hack to support prose.io
+              ({ result }) => {
+                return {
+                  ...result,
+                  body: result.body.replace('%7B%7Bsite.baseurl%7D%7D/content', ''),
+                }
+              }
+            ]
           },
         },
 
