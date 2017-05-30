@@ -1,6 +1,7 @@
 prose:
   rooturl: "content"
   media: "content/assets"
+  siteurl: "https://kids.silvercity.church/"
   metadata:
     _fields:
       title: &TITLE_FIELD
