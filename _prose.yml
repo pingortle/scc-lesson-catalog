@@ -24,6 +24,11 @@ prose:
       - <<: *TITLE_FIELD
       - <<: *DATE_FIELD
       - <<: *LAYOUT_FIELD
+        value: "Post"
+    content/lessons:
+      - <<: *TITLE_FIELD
+      - <<: *DATE_FIELD
+      - <<: *LAYOUT_FIELD
         value: "Lesson"
       - lesson:
         name: "lesson"
@@ -32,8 +37,3 @@ prose:
           label: "lesson"
           help: "This should be a link to your lesson on the web. (e.g. https://www.lessons.com/my/lesson.html)"
           placeholder: "https://www.lessons.com/my/lesson.html"
-    content/lessons:
-      - <<: *TITLE_FIELD
-      - <<: *DATE_FIELD
-      - <<: *LAYOUT_FIELD
-        value: "Post"
