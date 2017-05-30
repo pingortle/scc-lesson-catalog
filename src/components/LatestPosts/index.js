@@ -8,8 +8,9 @@ import styles from "./index.css"
 const defaultNumberOfPosts = 6
 
 const LatestPosts = (props, { collection }) => {
+  const layout = props.layout || "Post"
   const latestPosts = enhanceCollection(collection, {
-    filter: { layout: "Post" },
+    filter: { layout: layout },
     sort: "date",
     reverse: true,
   })
@@ -27,6 +28,7 @@ const LatestPosts = (props, { collection }) => {
 
 LatestPosts.propTypes = {
   numberOfPosts: PropTypes.number,
+  layout: PropTypes.string
 }
 
 LatestPosts.contextTypes = {

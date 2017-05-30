@@ -6,7 +6,7 @@ import Page from "../Page"
 const Homepage = (props) => {
   return (
     <Page { ...props }>
-      <LatestPosts />
+      <LatestPosts layout="Lesson" />
     </Page>
   )
 }

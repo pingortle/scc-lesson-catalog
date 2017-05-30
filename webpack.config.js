@@ -196,6 +196,14 @@ export default (config = {}) => {
               limit: 20,
             },
           },
+          "lessons.xml": {
+            collectionOptions: {
+              filter: { layout: "Lesson" },
+              sort: "date",
+              reverse: true,
+              limit: 20,
+            },
+          },
         },
       }),
 
