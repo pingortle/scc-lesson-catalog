@@ -5,9 +5,9 @@ prose:
     _fields:
       title: &TITLE_FIELD
         name: "title"
-          field:
-            element: "text"
-            label: "title"
+        field:
+          element: "text"
+          label: "title"
     content/posts:
       - <<: *TITLE_FIELD
     content/lessons:
