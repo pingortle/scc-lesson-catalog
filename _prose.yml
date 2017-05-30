@@ -7,8 +7,8 @@ prose:
         field:
           element: "text"
           label: "title"
-      posts:
-        - name: "title"
-          field:
-            element: "text"
-            label: "title"
+    posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
