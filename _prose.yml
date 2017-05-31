@@ -18,18 +18,20 @@ prose:
           placeholder: "2013-05-12"
       layout: &LAYOUT_FIELD
         name: "layout"
-        field:
-          element: "hidden"
     content/posts:
       - <<: *TITLE_FIELD
       - <<: *DATE_FIELD
       - <<: *LAYOUT_FIELD
-        value: "Post"
+        field:
+          element: "hidden"
+          value: "Post"
     content/lessons:
       - <<: *TITLE_FIELD
       - <<: *DATE_FIELD
       - <<: *LAYOUT_FIELD
-        value: "Lesson"
+        field:
+          element: "hidden"
+          value: "Lesson"
       - lesson:
         name: "lesson"
         field:
