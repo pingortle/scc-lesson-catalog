@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Post from "../Post"
+import LatestPosts from "../../components/LatestPosts"
+import defaultHero from "./default-hero.jpg"
 
 const OtherResources = ({ links }) => {
   if (links.length > 0) {
@@ -9,7 +11,7 @@ const OtherResources = ({ links }) => {
     )
 
     return (
-      <div className="other-resources-container">
+      <div>
         <h2>Other Resources</h2>
         <ul>{ linkElements }</ul>
       </div>
@@ -41,8 +43,11 @@ LessonLink.propTypes = {
 }
 
 const Lesson = (properties) => {
+  const feature = <LatestPosts layout="Lesson" />
+  properties.head.hero = defaultHero;
+
   return (
-    <Post { ...properties }>
+    <Post { ...properties } feature={ feature } >
       <LessonLink lesson={ properties.head.lesson } />
       <OtherResources links={ properties.head.links } />
     </Post>

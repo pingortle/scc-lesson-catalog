@@ -27,7 +27,7 @@ const Post = (props) => {
     >
       { props.children }
       <hr />
-      <LatestPosts />
+      { props.feature }
     </Page>
   )
 }
@@ -35,6 +35,11 @@ const Post = (props) => {
 Post.propTypes = {
   head: PropTypes.object.isRequired,
   children: PropTypes.node,
+  feature: PropTypes.node,
+}
+
+Post.defaultProps = {
+  feature: <LatestPosts />
 }
 
 export default Post
